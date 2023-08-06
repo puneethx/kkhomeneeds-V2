@@ -1,0 +1,60 @@
+.footer{
+    margin: 100px 200px 20px 200px;
+    .top{
+        display: flex;
+        gap:50px
+    }
+    .item2{
+        flex:1;
+        display: flex;
+        flex-direction: column;  
+        gap:10px ;
+        text-align: justify;
+        font-size: 15px;
+        color: rgb(125, 125, 125);
+        h1{
+            font-size: 18px;
+            color: rgb(68, 68, 68);
+        }
+        .name{
+            font-weight: 600;
+            color: rgb(68, 68, 68);
+        }
+    }
+    .item{
+        flex:0.6;
+        display: flex;
+        flex-direction: column;  
+        gap:10px ;
+        text-align: justify;
+        font-size: 15px;
+        color: rgb(125, 125, 125);
+        h1{
+            font-size: 18px;
+            color: rgb(68, 68, 68);
+        }
+        
+    }
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+        .main-logo{
+            height: 40px;
+            object-fit: cover;
+        }
+        .left{
+            color: rgb(125, 125, 125);
+        }
+        .right{
+            color: rgb(125, 125, 125);
+            .btm-rt{
+                font-weight: 600;
+                font-size: 20px;
+                color: rgb(68,68,68);
+            }
+            
+        }
+    }
+}
