@@ -2,9 +2,7 @@
     height: 70px;
     background-image: url("../Images/nav-back.png");
     background-position: center;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(246,242,197,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(246,242,197,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(246,242,197,0.75);
+    width: 100%;
     .wrapper{
         display: flex;
         padding: 10px 30px;

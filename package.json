@@ -15,6 +15,7 @@
     "react-scripts": "5.0.1",
     "sass": "^1.64.2",
     "scss": "^0.2.4",
+    "use-http": "^1.0.28",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
