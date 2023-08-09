@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="item">
           <h1>Contact</h1>
           <span>We'd love to hear from you!</span>
-          <span className='name'>KK HomeNeeds</span>
+          <span>KK HomeNeeds</span>
           <span>Owner: T Surendra Reddy</span>
           <span>Phone : +91 9703508405</span>
           <span>Opp. Indian Bank,</span>
