@@ -37,7 +37,9 @@
             color: rgba(0, 0, 0, 0.877);
             cursor: pointer;
             border: none;
-            background-color: rgba(255, 255, 255, 0.707);
+            background-color: rgba(255, 255, 255, 0.5);
+            -webkit-backdrop-filter:saturate(180%) blur(90px);
+            backdrop-filter: saturate(180%) blur(5px);
             text-transform: uppercase;
             font-weight: 500;
             -webkit-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.04);
@@ -45,7 +47,7 @@
             box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.1);
             
             &:hover{
-                background-color: rgba(255, 255, 255, 0.4);
+                background-color: rgba(255, 255, 255, 0.3);
             }
         }
 

@@ -1,39 +1,76 @@
 .products {
-    padding: 30px 50px;
-    display: flex;
+  padding: 30px 50px;
+  display: flex;
   
-    .left {
-      flex: 1;
-      position: sticky;
-      height: 100%;
-      top: 50px;
+  .left {
+    flex: 1;
+    position: sticky;
+    height: 100%;
+    top: 90px;
   
-      .filterItem{
-        margin-bottom: 30px;
+    .filterItem{
+      margin-bottom: 30px;
   
-        h2{
-          font-weight: 600;
-          margin-bottom: 20px;
-          font-size: 20px;
-        }
-  
-        .inputItem{
-          margin-bottom: 10px;
-          label{
-            margin-left: 10px;
-          }
-        }
+      h2{
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 20px;
       }
-    }
-    
-    .right {
-      flex: 4;
   
-      .catImg{
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        margin-bottom: 30px;
+      .inputItem{
+        margin-bottom: 5px;
+        label{
+          margin-left: 10px;
+        }
       }
     }
   }
+    
+  .right {
+    flex: 4;
+    margin-top: 60px;
+  
+    .catImg{
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      margin-bottom: 30px;
+      border-radius: 7px;
+    }
+  }
+
+  $color_1: transparent;
+  $border-color_1: transparent;
+
+  input[type=range] {
+	height: 20px;
+  appearance: none;
+	margin: 10px 0;
+	width: 60%;
+	&::-webkit-slider-runnable-track {
+		width: 100%;
+		height: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+		cursor: pointer;
+		box-shadow: 1px 1px 1px #000000;
+		background: #ffce46d0;
+		border-radius: 19px;
+		border: 1px solid #000000;
+	}
+	&::-webkit-slider-thumb {
+		box-shadow: 1px 1px 1px #000000;
+		border: 1px solid #000000;
+		height: 16px;
+		width: 16px;
+		border-radius: 50px;
+		background: #FFFFFF;
+		cursor: pointer;
+		-webkit-appearance: none;
+		margin-top: -6px;
+	}
+
+	
+}
+
+}

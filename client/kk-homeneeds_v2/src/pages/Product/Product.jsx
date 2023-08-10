@@ -11,6 +11,7 @@ const Product = () => {
   const images = [
     "https://images.pexels.com/photos/10026491/pexels-photo-10026491.png?auto=compresss&cs=tinyrgb&w=1600&lazy=load",
     "https://images.pexels.com/photos/12179283/pexels-photo-12179283.jpeg?auto=compresss&cs=tinyrgb&w=1600&lazy=load",
+    "https://m.media-amazon.com/images/I/61bK6PMOC3L._SL1500_.jpg",
   ]
   return (
     <div className='product'>
@@ -18,19 +19,23 @@ const Product = () => {
         <div className="images">
           <img src={images[0]} alt="" onClick={e => setSelectedImg(0)}/>
           <img src={images[1]} alt="" onClick={e => setSelectedImg(1)}/>
+          <img src={images[2]} alt="" onClick={e => setSelectedImg(2)}/>
         </div>
         <div className="mainImg">
           <img src={images[selectedImg]} alt="" />
         </div>
       </div>
       <div className="right">
-        <h1>Title</h1>
-        <span>₹699</span>
+        <span className='title'>Butterfly 1.5L 1500W Electric Kettle, Dry Boil Protection, EKN</span>
+        <span className='price'>₹699</span>
         <p>
-          I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth 
-          I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth 
-          I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth 
-          I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth I am Puneeth 
+        Prepare hot water, instant tea etc. in a matter of minutes 
+        with Butterfly EKN Kettle. With attractive features like 
+        automatic cut-off, ergonomically designed handles, unique designs
+        with attractive finishes, lightweight and compact, making it easy
+        to carry. To top it off, it also comes with the better safety
+        features, making it safe to use. It will quickly heats and lasts 
+        the heat of the water for a long.
         </p>
         <div className="quantity">
           <button onClick={()=> setQuantity(prev=>(prev === 1 ? 1 : prev - 1))}>-</button>
@@ -38,11 +43,11 @@ const Product = () => {
           <button onClick={()=> setQuantity(prev=>prev+1)}>+</button>
         </div>
         <button className='add'>
-          <AddShoppingCartIcon/> ADD TO CART
+          <AddShoppingCartIcon className='icon'/> ADD TO CART
         </button>
         <div className='link'>
           <div className='item'>
-            <FavoriteBorderIcon/> ADD TO WISHLIST
+            <FavoriteBorderIcon className='icon'/> ADD TO WISHLIST
           </div>
         </div>
         <div className='info'>

@@ -1,18 +1,25 @@
 .navbar{
-    height: 70px;
+    height: 60px;
     background-image: url("../Images/nav-back.png");
     background-position: center;
     width: 100%;
+    // background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    z-index: 999999;
+    -webkit-backdrop-filter:saturate(180%) blur(90px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom:1px solid rgba(255, 255, 255, 0.5);
+
     .wrapper{
         display: flex;
-        padding: 10px 30px;
+        padding: 2px 20px;
         justify-content: space-between;
         align-items: center;
     }
     .item{
         display: flex;
         align-items: center;
-        font-size: 18px;
+        font-size: 16px;
     }
     .left{
         display: flex;
@@ -21,7 +28,8 @@
     }
     .center{
         .main-logo{
-            height: 50px;
+            height: 45px;
+            margin-top: 5px;
         }
     }
     .right{
