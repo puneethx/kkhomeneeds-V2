@@ -5,18 +5,22 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import useFetch from '../../hooks/useFetch';
 import { useParams } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cartReducer';
 
 const Product = () => {
   const id = useParams().id;
   const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setQuantity] = useState(1);
   
+  const dispatch = useDispatch()
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
   return (
     <div className='product'>
-      {loading?"loading" : (<><div className="left">
+      {loading
+        ? ("loading") 
+        : (<><div className="left">
         <div className="images">
           <img 
             src={`http://localhost:1337`+ data?.attributes?.img?.data?.attributes?.url} 
@@ -43,7 +47,16 @@ const Product = () => {
           {quantity}
           <button onClick={()=> setQuantity(prev=>prev+1)}>+</button>
         </div>
-        <button className='add'>
+        <button className='add' onClick={()=>
+          dispatch(
+            addToCart({
+              id: data.id,
+              title: data.attributes.title,
+              desc: data.attributes.desc,
+              price: data.attributes.price,
+              img: data.attributes.img.data.attributes.url,
+              quantity,
+        }))}>
           <AddShoppingCartIcon className='icon'/> ADD TO CART
         </button>
         <div className='link'>
