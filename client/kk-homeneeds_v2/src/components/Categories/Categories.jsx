@@ -1,6 +1,12 @@
 import React from "react";
 import "./categories.scss";
 import { Link } from "react-router-dom";
+import Cat1 from "../Images/Cat_1.png";
+import Cat2 from "../Images/Cat_2.png";
+import Cat3 from "../Images/Cat_3.png";
+import Cat4 from "../Images/Cat_4.png";
+import Cat5 from "../Images/Cat_5.png";
+import Cat6 from "../Images/Cat_6.png";
 
 const Categories = () => {
   return (
@@ -9,24 +15,24 @@ const Categories = () => {
         <div className="row">
           <img
             className="img"
-            src="https://images.pexels.com/photos/818992/pexels-photo-818992.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src={Cat1}
             alt=""
           />
           <button>
             <Link className="link" to="/products/1">
-              Sale
+              Stoves
             </Link>
           </button>
         </div>
         <div className="row">
           <img
             className="img"
-            src="https://images.pexels.com/photos/2036646/pexels-photo-2036646.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src={Cat2}
             alt=""
           />
           <button>
             <Link to="/products/1" className="link">
-              Women
+              Fans
             </Link>
           </button>
         </div>
@@ -35,12 +41,12 @@ const Categories = () => {
         <div className="row">
           <img
             className="img"
-            src="https://images.pexels.com/photos/1813947/pexels-photo-1813947.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src={Cat3}
             alt=""
           />
           <button>
             <Link to="/products/1" className="link">
-              Newly Added
+              Tower Fans
             </Link>
           </button>
         </div>
@@ -51,12 +57,12 @@ const Categories = () => {
             <div className="row">
               <img
                 className="img"
-                src="https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                src={Cat4}
                 alt=""
               />
               <button>
                 <Link to="/products/1" className="link">
-                  Men
+                  Home Theatre
                 </Link>
               </button>
             </div>
@@ -65,12 +71,12 @@ const Categories = () => {
             <div className="row">
               <img
                 className="img"
-                src="https://images.pexels.com/photos/2703202/pexels-photo-2703202.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                src={Cat5}
                 alt=""
               />
               <button>
                 <Link to="/products/1" className="link">
-                  Accessories
+                  Electric Appliances
                 </Link>
               </button>
             </div>
@@ -79,12 +85,12 @@ const Categories = () => {
         <div className="row">
           <img
             className="img"
-            src="https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src={Cat6}
             alt=""
           />
           <button className="button">
             <Link to="/products/1" className="link">
-              Shoes
+              Cookers & Pans
             </Link>
           </button>
         </div>

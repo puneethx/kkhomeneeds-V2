@@ -13,7 +13,7 @@
       border-radius: 10px;
       &:hover{
         .secondImg{
-          z-index: 2 ;
+          z-index: 2;
         }
       }
   
@@ -22,6 +22,7 @@
         height: 100%;
         object-fit: cover;
         position: absolute;
+
       }
   
       .mainImg{

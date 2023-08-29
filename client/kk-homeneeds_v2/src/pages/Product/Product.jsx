@@ -3,39 +3,40 @@ import "./product.scss";
 import {useState} from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import useFetch from '../../hooks/useFetch';
+import { useParams } from 'react-router-dom';
 
 
 const Product = () => {
-  const [selectedImg, setSelectedImg] = useState(0);
+  const id = useParams().id;
+  const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setQuantity] = useState(1);
-  const images = [
-    "https://images.pexels.com/photos/10026491/pexels-photo-10026491.png?auto=compresss&cs=tinyrgb&w=1600&lazy=load",
-    "https://images.pexels.com/photos/12179283/pexels-photo-12179283.jpeg?auto=compresss&cs=tinyrgb&w=1600&lazy=load",
-    "https://m.media-amazon.com/images/I/61bK6PMOC3L._SL1500_.jpg",
-  ]
+  
+  const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
+
   return (
     <div className='product'>
-      <div className="left">
+      {loading?"loading" : (<><div className="left">
         <div className="images">
-          <img src={images[0]} alt="" onClick={e => setSelectedImg(0)}/>
-          <img src={images[1]} alt="" onClick={e => setSelectedImg(1)}/>
-          <img src={images[2]} alt="" onClick={e => setSelectedImg(2)}/>
+          <img 
+            src={`http://localhost:1337`+ data?.attributes?.img?.data?.attributes?.url} 
+            alt="" onClick={e => setSelectedImg("img")}/>
+          <img 
+            src={`http://localhost:1337`+ data?.attributes?.img2?.data?.attributes?.url} 
+            alt="" onClick={e => setSelectedImg("img2")}/>
+          {/* <img 
+            src={`http://localhost:1337`+ data?.attributes?.img3?.data?.attributes?.url} 
+            alt="" onClick={e => setSelectedImg("img3")}/> */}
         </div>
         <div className="mainImg">
-          <img src={images[selectedImg]} alt="" />
+          <img src={`http://localhost:1337`+ data?.attributes[selectedImg]?.data?.attributes?.url} alt="" />
         </div>
       </div>
       <div className="right">
-        <span className='title'>Butterfly 1.5L 1500W Electric Kettle, Dry Boil Protection, EKN</span>
-        <span className='price'>₹699</span>
+        <span className='title'>{data?.attributes?.title}</span>
+        <span className='price'>₹{data?.attributes?.price}</span>
         <p>
-        Prepare hot water, instant tea etc. in a matter of minutes 
-        with Butterfly EKN Kettle. With attractive features like 
-        automatic cut-off, ergonomically designed handles, unique designs
-        with attractive finishes, lightweight and compact, making it easy
-        to carry. To top it off, it also comes with the better safety
-        features, making it safe to use. It will quickly heats and lasts 
-        the heat of the water for a long.
+            {data?.attributes?.desc}
         </p>
         <div className="quantity">
           <button onClick={()=> setQuantity(prev=>(prev === 1 ? 1 : prev - 1))}>-</button>
@@ -62,7 +63,7 @@ const Product = () => {
           <hr/>
           <span>FAQ</span>
         </div>
-      </div>
+      </div></>)}
     </div>
   )
 }

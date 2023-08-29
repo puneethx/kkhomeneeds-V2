@@ -41,6 +41,9 @@
         font-size: 28px;
         font-weight: 600;
       }
+      .title::first-letter{
+        text-transform: capitalize;
+      }
 
       .details{
         display: flex;
