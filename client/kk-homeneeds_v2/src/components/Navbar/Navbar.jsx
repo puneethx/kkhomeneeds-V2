@@ -12,7 +12,9 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [open,setOpen] = useState(false);
-  const products = useSelector((state) => state.cart.products)
+  const products = useSelector((state) => state.cart.products);
+
+  
   return (
     <div className='navbar'>
       <div className="wrapper">
