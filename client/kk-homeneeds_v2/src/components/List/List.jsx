@@ -1,22 +1,52 @@
 import React from 'react';
 import "./list.scss";
-import useFetch from '../../hooks/useFetch';
 import Card from "../Card/Card";
 
 
-const List = ({ subCats,maxPrice,sort,catId }) => {
-  const { data, loading, error } = useFetch(
-    `/products?populate=*&[filters][categories][id][$eq]=${catId}
-    ${subCats.map(
-      item => `&[filters][sub_categories][id][$eq]=${item}`
-      )}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
-  );
+const List = () => {
+
+  const data = [
+    {
+      id:1,
+      img:"https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      img2:"https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title:"Butterfly Kettle",
+      isNew:true,
+      oldPrice: 1299,
+      price: 799,
+    },
+    {
+      id:2,
+      img:"https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      img2:"https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title:"Butterfly Kettle",
+      isNew:true,
+      oldPrice: 1299,
+      price: 799,
+    },
+    {
+      id:3,
+      img:"https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      img2:"https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title:"Butterfly Kettle",
+      isNew:true,
+      oldPrice: 1299,
+      price: 799,
+    },
+    {
+      id:4,
+      img:"https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      img2:"https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title:"Butterfly Kettle",
+      isNew:false,
+      oldPrice: 1299,
+      price: 799,
+    },
+  ];
     
   return (
     <div className='list'>
-        {loading 
-          ? "loading" 
-          :data?.map(item=> <Card item={item} key={item.id}/>)}
+        {data?.map(item=> <Card item={item} key={item.id}/>)}
     </div>
   )
 }

@@ -4,6 +4,7 @@ import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts
 import Categories from '../../components/Categories/Categories';
 import Location from '../../components/Location/Location';
 import "./home.scss";
+import TrendingProducts from '../../components/TrendingProducts/TrendingProducts';
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
       <Slider/>
       <FeaturedProducts type="featured"/>
       <Categories/>
-      <FeaturedProducts type="trending"/>
+      <TrendingProducts type="trending"/>
       <Location/>
     </div>
   )

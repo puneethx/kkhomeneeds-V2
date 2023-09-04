@@ -3,42 +3,57 @@ import "./product.scss";
 import {useState} from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import useFetch from '../../hooks/useFetch';
-import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cartReducer';
 
 const Product = () => {
-  const id = useParams().id;
-  const [selectedImg, setSelectedImg] = useState("img");
+  const [selectedImg, setSelectedImg] = useState(0);
   const [quantity, setQuantity] = useState(1);
   
   const dispatch = useDispatch()
-  const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
+  const images = [
+      "https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    
+  ];
+
+
+
+  const data = [
+    {
+      id:1,
+      img:"https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      img2:"https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title:"Butterfly Kettle",
+      desc: "This is Butterfly Kettle from Butterfly company",
+      isNew:true,
+      oldPrice: 1299,
+      price: 799,
+    }
+  ];
+
+
 
   return (
     <div className='product'>
-      {loading
-        ? ("loading") 
-        : (<><div className="left">
+      <div className="left">
         <div className="images">
           <img 
-            src={`http://localhost:1337`+ data?.attributes?.img?.data?.attributes?.url} 
-            alt="" onClick={e => setSelectedImg("img")}/>
+            src={images[0]} 
+            alt="" onClick={e => setSelectedImg(0)}/>
           <img 
-            src={`http://localhost:1337`+ data?.attributes?.img2?.data?.attributes?.url} 
-            alt="" onClick={e => setSelectedImg("img2")}/>
-          {/* <img 
-            src={`http://localhost:1337`+ data?.attributes?.img3?.data?.attributes?.url} 
-            alt="" onClick={e => setSelectedImg("img3")}/> */}
+            src={images[1]} 
+            alt="" onClick={e => setSelectedImg(1)}/>
         </div>
         <div className="mainImg">
-          <img src={`http://localhost:1337`+ data?.attributes[selectedImg]?.data?.attributes?.url} alt="" />
+          <img src={images[selectedImg]} alt="" />
         </div>
       </div>
-      <div className="right">
-        <span className='title'>{data?.attributes?.title}</span>
-        <span className='price'>₹{data?.attributes?.price}</span>
+      {data?.map(item=>  
+      <div className="right" item={item} key={item.id}>
+        <span className='title'  >{item.title}</span>
+        <span className='desc' > {item.desc}</span>
+        <span className='price'>₹{item.price}</span>
         <p>
             {data?.attributes?.desc}
         </p>
@@ -50,11 +65,11 @@ const Product = () => {
         <button className='add' onClick={()=>
           dispatch(
             addToCart({
-              id: data.id,
-              title: data.attributes.title,
-              desc: data.attributes.desc,
-              price: data.attributes.price,
-              img: data.attributes.img.data.attributes.url,
+              id: item.id,
+              title: item.title,
+              desc: item.desc,
+              price: item.price,
+              img: item.img,
               quantity,
         }))}>
           <AddShoppingCartIcon className='icon'/> ADD TO CART
@@ -76,7 +91,8 @@ const Product = () => {
           <hr/>
           <span>FAQ</span>
         </div>
-      </div></>)}
+      </div>
+      )}
     </div>
   )
 }

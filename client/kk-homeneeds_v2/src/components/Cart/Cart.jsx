@@ -3,7 +3,8 @@ import "./cart.scss";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined"
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem,resetCart } from '../../redux/cartReducer';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 const Cart = () => {
     const products = useSelector(state=>state.cart.products);
@@ -19,7 +20,7 @@ const Cart = () => {
         <h2 className='shop'>Shopping Cart</h2>
         {products?.map(item=>(
             <div className='item' key={item.id}>
-                <img src={`http://localhost:1337`+item.img} alt="" />
+                <img src={item.img} alt="" />
                 <div className="details">
                     <h2>{item.title}</h2>
                     <p>{item.desc?.substring(0,100)}</p>
@@ -33,7 +34,9 @@ const Cart = () => {
             <span>SUBTOTAL</span>
             <span>₹{totalPrice()}</span>
         </div>
-            <button >PROCEED TO CHECKOUT</button>
+            <Link className="link" to={`/delivery`}>
+                <button >PROCEED TO CHECKOUT</button>
+            </Link>
         <span className="reset" onClick={()=> dispatch(resetCart())}>Reset Cart</span>
         </div>
     </div>

@@ -1,14 +1,48 @@
 import React from "react";
 import Card from "../Card/Card";
-import "./featuredProducts.scss";
-import useFetch from "../../hooks/useFetch";
-// import {useState,useEffect} from "react";
-// import axios from "axios";
+import "./ftProducts.scss";
 
 
-
-const FeaturedProducts = ({ type }) => {
+const FeaturedProducts = ({type}) => {
   
+  const data = [
+    {
+      id:1,
+      img:"https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      img2:"https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title:"Butterfly Kettle",
+      isNew:true,
+      oldPrice: 1299,
+      price: 799,
+    },
+    {
+      id:2,
+      img:"https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      img2:"https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title:"Butterfly Kettle",
+      isNew:true,
+      oldPrice: 1299,
+      price: 799,
+    },
+    {
+      id:3,
+      img:"https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      img2:"https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title:"Butterfly Kettle",
+      isNew:true,
+      oldPrice: 1299,
+      price: 799,
+    },
+    {
+      id:4,
+      img:"https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      img2:"https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title:"Butterfly Kettle",
+      isNew:false,
+      oldPrice: 1299,
+      price: 799,
+    },
+  ]
   // // const { data, loading, error } = useFetch(
   // //   `/products?populate=*&[filters][type][$eq]=${type}`
   // // );
@@ -46,12 +80,12 @@ const FeaturedProducts = ({ type }) => {
   // },[]);
 
 
-  const {data,loading,error} = useFetch(
-    `products?populate=*&[filters][type][$eq]=${type}`
-  );
+  // const {data,loading,error} = useFetch(
+  //   `products?populate=*&[filters][type][$eq]=${type}`
+  // );
 
   return (
-    <div className="featuredProducts">
+    <div className="ftproducts">
       <div className="top">
         <h1>{type} products</h1>
         <p>
@@ -63,11 +97,8 @@ const FeaturedProducts = ({ type }) => {
         </p>
       </div>
       <div className="bottom">
-          {error
-            ? "Something went wrong!"
-            : loading
-            ? "loading"
-            : data?.map((item) => <Card item={item} key={item.id} />
+          {data.map((item) => 
+            <Card item={item} key={item.id} />
           )}
       </div>
     </div>
