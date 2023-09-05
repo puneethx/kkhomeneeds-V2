@@ -1,14 +1,8 @@
 .navbar{
     height: 60px;
-    background-image: url("../Images/nav-back.png");
-    background-position: center;
     width: 100%;
-    background-size: cover;
-    // background-color: rgba(255, 255, 255, 0.5);
     position: fixed;
     z-index: 999999;
-    // -webkit-backdrop-filter:saturate(180%) blur(90px);
-    // backdrop-filter: saturate(180%) blur(20px);
     border-bottom:1px solid rgba(255, 255, 255, 0.5);
     &::before{
         content: "";
@@ -16,26 +10,31 @@
         top: 0;
         left: 0;
         width: 100%;
+        background-image: url("../Images/nav-back.png");
+        background-size: cover;
+        background-position: center;
         height: 100%;
         -webkit-backdrop-filter:saturate(180%) blur(90px);
         backdrop-filter: saturate(180%) blur(20px);
         z-index: -999;
     }
     .wrapper{
-        padding: 2px 20px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        padding-top: 2px;
+    }
+    .left{
+        display: flex;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin-right: auto;
+        padding-left: 20px;
     }
     .item{
         display: flex;
         align-items: center;
-        font-size: 16px;
-    }
-    .left{
-        display: flex;
-        align-items: center;
-        gap: 25px;
     }
     #menu-icon{
         display: none;
@@ -44,19 +43,19 @@
         .main-logo{
             height: 45px;
             margin-top: 5px;
-            margin-right: 8.5vw;
         }
     }
     .right{
         display: flex;
         align-items: center;
         gap:25px;
+        margin-left: auto;
+        padding-right: 20px;
         .icons{
             display: flex;
             gap: 15px;
             color: #777;
             cursor: pointer;
-
             .cartIcon{
                 position: relative;
                 .cartSpan{
@@ -76,6 +75,7 @@
             }
         }
     }
+
 }
 
 
@@ -86,23 +86,28 @@
         width: 100vw;
         .wrapper{
             display: flex;
+            justify-content: space-between;
             align-items: center;
-        }
-        #menu-icon{
-            display: block;
-            color: #777;
-            cursor: pointer;
-        }
-        .center{
-            .main-logo{
-                height: 36px;
-                object-fit: cover;
-                margin-right: 0vw;
+            #menu-icon{
+                display: block;
+                color: #777;
+                cursor: pointer;
+                margin-left: 10px;
+            }
+            .right{
+                margin-left: 0;
+            }
+            .center{
+                .main-logo{
+                    height: 36px;
+                    object-fit: cover;
+                }
+            }
+            #small{
+                display: none;
             }
         }
-        #small{
-            display: none;
-        }
+        
     }
     
     
