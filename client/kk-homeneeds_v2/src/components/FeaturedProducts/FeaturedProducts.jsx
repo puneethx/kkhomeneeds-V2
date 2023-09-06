@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../Card/Card";
-import "./ftProducts.scss";
+import "./ftproductsdummy.scss";
 
 
 const FeaturedProducts = ({type}) => {
@@ -89,16 +89,16 @@ const FeaturedProducts = ({type}) => {
       <div className="top">
         <h1>{type} products</h1>
         <p>
-          Featured Products Trending Products Featured Products Trending ProductsFeatured Products Trending Products
-          Featured Products Trending ProductsFeatured Products Trending ProductsFeatured Products Trending Products
-          Featured Products Trending ProductsFeatured Products Trending ProductsFeatured Products Trending Products
-          Featured Products Trending ProductsFeatured Products Trending ProductsFeatured Products Trending Products
-          Featured Products Trending ProductsFeatured Products Trending ProductsFeatured Products Trending Products
+          Explore our must-have electrical appliances, a variety of fans to keep you cool, 
+          and an array of kitchen gadgets, stoves, and cookers for culinary delights. 
+          Discover top-quality products that make your home functional and comfortable. 
+          Elevate your home living experience with our featured items. 
+          Shop now for home perfection.
         </p>
       </div>
       <div className="bottom">
           {data.map((item) => 
-            <Card item={item} key={item.id} />
+            <div className="ftcard"><Card item={item} key={item.id} /></div>
           )}
       </div>
     </div>

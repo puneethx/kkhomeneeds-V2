@@ -66,3 +66,14 @@
       }
     }
   }
+
+
+  @media screen and (max-width: 854px) {
+    .card{
+      width: 125px;
+      margin-bottom: 0px;
+      .image{
+        height: 170px;
+      }
+    }
+  }

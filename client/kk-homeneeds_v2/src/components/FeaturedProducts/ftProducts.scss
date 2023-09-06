@@ -1,25 +1,29 @@
-.ftproducts{
-    margin: 100px 200px;
+// .ftproducts{
+//     margin: 100px 200px;
 
-    .top{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 50px;
+//     .top{
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         margin-bottom: 50px;
 
-        h1{
-            flex:2;
-            text-transform: capitalize;
-        }
+//         h1{
+//             flex:2;
+//             text-transform: capitalize;
+//         }
 
-        p{
-            flex:3;
-            color: rgb(125, 125, 125);
-        }
-    }
-    .bottom{
-        display: flex;
-        justify-content: center;
-        gap: 50px;
-    }
+//         p{
+//             flex:3;
+//             color: rgb(125, 125, 125);
+//         }
+//     }
+//     .bottom{
+//         display: flex;
+//         justify-content: center;
+//         gap: 50px;
+//     }
+// }
+
+@media screen and (max-width: 854px) {
+
 }

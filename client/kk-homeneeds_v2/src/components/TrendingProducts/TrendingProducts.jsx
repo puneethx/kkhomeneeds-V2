@@ -49,11 +49,11 @@ const TrendingProducts = () => {
           <div className="top">
             <h1>Trending products</h1>
             <p>
-              Featured Products Trending Products Featured Products Trending ProductsFeatured Products Trending Products
-              Featured Products Trending ProductsFeatured Products Trending ProductsFeatured Products Trending Products
-              Featured Products Trending ProductsFeatured Products Trending ProductsFeatured Products Trending Products
-              Featured Products Trending ProductsFeatured Products Trending ProductsFeatured Products Trending Products
-              Featured Products Trending ProductsFeatured Products Trending ProductsFeatured Products Trending Products
+              Stay ahead of the curve with our trending home essentials. 
+              From state-of-the-art electrical appliances to versatile fans 
+              and innovative kitchen gadgets, we've got your needs covered. 
+              Explore the latest stoves and cookers to elevate your culinary prowess. 
+              Shop now for the hottest products that blend style and functionality seamlessly.
             </p>
           </div>
           <div className="bottom">
