@@ -1,10 +1,9 @@
 import React from "react";
 import Card from "../Card/Card";
-import "./ftproductsdummy.scss";
+import "./ftProducts.scss";
 
 
-const FeaturedProducts = ({type}) => {
-  
+const FeaturedProducts = () => {
   const data = [
     {
       id:1,
@@ -87,7 +86,7 @@ const FeaturedProducts = ({type}) => {
   return (
     <div className="ftproducts">
       <div className="top">
-        <h1>{type} products</h1>
+        <h1>Featured products</h1>
         <p>
           Explore our must-have electrical appliances, a variety of fans to keep you cool, 
           and an array of kitchen gadgets, stoves, and cookers for culinary delights. 

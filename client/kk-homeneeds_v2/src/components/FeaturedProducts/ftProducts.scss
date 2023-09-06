@@ -1,29 +1,40 @@
-// .ftproducts{
-//     margin: 100px 200px;
-
-//     .top{
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         margin-bottom: 50px;
-
-//         h1{
-//             flex:2;
-//             text-transform: capitalize;
-//         }
-
-//         p{
-//             flex:3;
-//             color: rgb(125, 125, 125);
-//         }
-//     }
-//     .bottom{
-//         display: flex;
-//         justify-content: center;
-//         gap: 50px;
-//     }
-// }
+.ftproducts{
+    margin: 14vh 10vw 10vh 10vw;
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10vh;
+        h1{
+            flex:2;
+            text-transform: capitalize;
+        }
+        p{
+            flex:3;
+            color: rgb(125, 125, 125);
+        }
+    }
+    .bottom{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
 @media screen and (max-width: 854px) {
-
+    .ftproducts{
+        margin: 5vh 10vw 10vh 10vw;
+        .top{
+            flex-direction: column;
+            align-items: start;
+            margin-bottom: 7vh;
+            h1{
+                font-size: 20px;
+            }
+        }
+        .ftcard{
+            margin-bottom: 7vh;
+        }
+    }
 }

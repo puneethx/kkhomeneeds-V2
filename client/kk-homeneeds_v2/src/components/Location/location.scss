@@ -1,9 +1,30 @@
+// .location{
+//     display: flex;
+//     margin: 100px 300px;
+//     justify-content: space-between;
+
+//     h1{
+//         margin-bottom: 40px;
+//     }
+// }
+
 .location{
     display: flex;
-    margin: 100px 300px;
-    justify-content: space-between;
+    justify-content: space-around;
+}
 
-    h1{
-        margin-bottom: 40px;
+@media screen and (max-width: 854px) {
+    .location{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .point{
+            margin-bottom: 7vh;
+        }
+        h1{
+            font-size: 20px;
+        }
     }
 }

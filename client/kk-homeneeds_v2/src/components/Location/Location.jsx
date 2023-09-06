@@ -4,7 +4,7 @@ import "./location.scss";
 const Contact = () => {
   return (
     <div className='location'>
-        <div className='email'>
+        <div className='point'>
             <h1>Visit us</h1>
             <p>"Visit us today and transform your house<br/> 
                 into a cozy haven of comfort and style!"<br/><br/>
