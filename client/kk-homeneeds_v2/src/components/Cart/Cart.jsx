@@ -16,14 +16,13 @@ const Cart = () => {
     }
   return (
     <div className='cart'>
-        <div className='carter'>  
         <h2 className='shop'>Shopping Cart</h2>
         {products?.map(item=>(
             <div className='item' key={item.id}>
                 <img src={item.img} alt="" />
                 <div className="details">
                     <h2>{item.title}</h2>
-                    <p>{item.desc?.substring(0,100)}</p>
+                    <p id='small'>{item.desc?.substring(0,100)}</p>
                     <div className="price">{item.quantity} x ₹{item.price}</div>
                 </div>
                 <DeleteOutlinedIcon className='delete' onClick = {()=> dispatch(removeItem(item.id))}/>
@@ -38,7 +37,6 @@ const Cart = () => {
                 <button >PROCEED TO CHECKOUT</button>
             </Link>
         <span className="reset" onClick={()=> dispatch(resetCart())}>Reset Cart</span>
-        </div>
     </div>
   )
 }

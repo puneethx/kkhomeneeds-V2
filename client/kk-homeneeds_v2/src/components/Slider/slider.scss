@@ -41,3 +41,16 @@
         }
     }
 }
+
+@media screen and (max-width: 854px) {
+    .slider{
+        height: 40vh;
+        .icons{
+            .icon{
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+    
+}
