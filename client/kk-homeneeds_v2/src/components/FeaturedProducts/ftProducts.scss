@@ -24,8 +24,9 @@
 
 @media screen and (max-width: 854px) {
     .ftproducts{
-        margin: 5vh 10vw 5vh 10vw;
+        margin:0;
         .top{
+            margin: 5vh 10vw 5vh 10vw;
             flex-direction: column;
             align-items: start;
             margin-bottom: 7vh;
@@ -33,7 +34,13 @@
                 font-size: 20px;
             }
         }
-        .ftcard{
+        .bottom{
+            margin: 0vh 5vw 0vh 5vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             margin-bottom: 7vh;
         }
     }

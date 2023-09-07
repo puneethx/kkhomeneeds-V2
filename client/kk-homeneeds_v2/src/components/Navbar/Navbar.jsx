@@ -49,10 +49,11 @@ const Navbar = () => {
             <Link className='link' to="/">Home</Link>
           </div>
           <div id="small" className="item">
-            <Link className='link' to="/">About</Link>
+            {/* <Link className='link' to="/">About</Link> */}
+            <a href="#about" className='link'>About</a>
           </div>
           <div id="small" className="item">
-            <Link className='link' to="/">Contact</Link>
+          <a href="#contact" className='link'>Contact</a>
           </div>
           <div className='icons'>
             <div id='small'><SearchIcon/></div>

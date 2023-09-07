@@ -24,7 +24,7 @@ export default function Footer() {
           <span>Address</span>
           <span>Cookies</span>
         </div>
-        <div className="item2">
+        <div id="about" className="item2">
           <h1>About</h1>
           <span>At <span className='name'>KK HomeNeeds</span>, 
           we take pride in offering the best quality products 
@@ -32,7 +32,7 @@ export default function Footer() {
           We understand that creating a comfortable and stylish home doesn't have to break the bank, and that's why we are committed to providing you with 
           top-notch products at affordable prices. </span>
         </div>
-        <div className="item">
+        <div id='contact' className="item">
           <h1>Contact</h1>
           <span>We'd love to hear from you!</span>
           <span>KK HomeNeeds</span>
