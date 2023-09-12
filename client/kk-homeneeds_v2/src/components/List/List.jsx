@@ -1,6 +1,6 @@
 import React from 'react';
 import "./list.scss";
-import Card from "../Card/Card";
+import Card from '../Card/Card';
 
 
 const List = () => {
@@ -46,7 +46,7 @@ const List = () => {
     
   return (
     <div className='list'>
-        {data?.map(item=> <Card item={item} key={item.id}/>)}
+      {data?.map(item=><Card item={item} key={item.id}/>)}
     </div>
   )
 }

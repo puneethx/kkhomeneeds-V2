@@ -3,3 +3,13 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 854px) {
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2vw;
+    }
+}

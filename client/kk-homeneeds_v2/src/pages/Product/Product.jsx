@@ -25,7 +25,7 @@ const Product = () => {
       img:"https://images.pexels.com/photos/2074121/pexels-photo-2074121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       img2:"https://images.pexels.com/photos/7937410/pexels-photo-7937410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       title:"Butterfly Kettle",
-      desc: "This is Butterfly Kettle from Butterfly company",
+      desc: "This is",
       isNew:true,
       oldPrice: 1299,
       price: 799,
@@ -51,7 +51,7 @@ const Product = () => {
       </div>
       {data?.map(item=>  
       <div className="right" item={item} key={item.id}>
-        <span className='title'  >{item.title}</span>
+        <span className='title' >{item.title}</span>
         <span className='desc' > {item.desc}</span>
         <span className='price'>₹{item.price}</span>
         <p>

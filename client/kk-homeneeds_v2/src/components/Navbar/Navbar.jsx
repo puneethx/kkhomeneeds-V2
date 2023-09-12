@@ -13,30 +13,31 @@ import Menu from "../Menu/Menu"
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {
-  const [open,setOpen] = useState(false);
+  const [open,setOpen] = useState(null);
   const [menuOpen,setMenuOpen] = useState(false);
   const products = useSelector((state) => state.cart.products);
 
-
   return (
-    <div className='navbar'>
-      <div className="wrapper">
+    <div className='navbar' >
+      <div className="wrapper" >
         <div id="small" className="left">
           <div className="item">
-            <Link className='link' to ="/products/1">Appliances</Link>
+            <Link className='link' to ="/products/1" onClick={()=> setOpen(false)}>Appliances</Link>
           </div>
           <div className="item">
-            <Link className='link' to ="/products/2">Cookers</Link>
+            <Link className='link' to ="/products/2" onClick={()=> setOpen(false)}>Cookers</Link>
           </div>
           <div className="item">
-            <Link className='link' to ="/products/3">Gas Stoves</Link>
+            <Link className='link' to ="/products/3" onClick={()=> setOpen(false)}>Gas Stoves</Link>
           </div>
           <div className="item">
             <Link className='link' to ="/products/4">Fans</Link>
           </div>
         </div>
         <div id='iconsd'>
-            <div id='menu-icon' onClick={()=> setMenuOpen(!menuOpen)}>
+            <div id='menu-icon' 
+            onClick={()=> setMenuOpen(!menuOpen)}
+            >
                 <MenuRoundedIcon/>
             </div>
         </div>
@@ -59,7 +60,10 @@ const Navbar = () => {
             <div id='small'><SearchIcon/></div>
             <div id='small'><PersonOutlineOutlinedIcon/></div>
             <div id='small'><FavoriteBorderOutlinedIcon/></div>
-            <div className='cartIcon' onClick={()=> setOpen(!open)}>
+            <div className='cartIcon' 
+            id='cart'
+            onClick={()=> setOpen(!open)}
+            >
               <ShoppingCartOutlinedIcon/>
               <span className='cartSpan'>{products.length}</span>
             </div>

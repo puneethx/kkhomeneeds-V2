@@ -84,3 +84,25 @@
 }
 
 }
+
+
+@media screen and (max-width: 854px) {
+  .products{
+    padding: 2vh 5vw 7vh 5vw;
+    .left{
+      display: none;
+    }
+    .right{
+      .catImg{
+        width: 100%;
+        height: 30vw;
+        margin-bottom: 4vh;
+      }
+      .card{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
