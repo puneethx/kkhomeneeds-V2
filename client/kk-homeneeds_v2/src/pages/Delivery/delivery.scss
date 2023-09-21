@@ -1,3 +1,9 @@
-.delimg{
+.delimgpc{
     width: 100%;
+}
+
+@media screen and (max-width: 854px) {
+    .delimgpc{
+        margin-top: 7vh;
+    }
 }

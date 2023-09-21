@@ -1,11 +1,11 @@
 import React from 'react';
 import "./delivery.scss";
-import DelImg from "../../components/Images/delivery.png"
+import DelImgPC from "../../components/Images/delivery.png"
 
 const Delivery = () => {
   return (
     <div className='mainDiv'>
-        <img className='delimg' src={DelImg} alt='loading'></img>
+      <img className='delimgpc' src={DelImgPC} alt='loading'></img>
     </div>
   )
 }
