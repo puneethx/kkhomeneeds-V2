@@ -80,7 +80,7 @@
 
 @media screen and (max-width: 854px) {
     .navbar{
-        height: 7.5vh;
+        height: 9vh;
         background-image: url("../Images/nav-back-phone.png");
         width: 100vw;
         .wrapper{
@@ -98,9 +98,10 @@
             }
             .center{
                 .main-logo{
-                    height: 6vh;
+                    height: 7vh;
                     object-fit: cover;
-                    margin-top: 0.5vh;
+                    width: 100%;
+                    margin-top: 0.6vh;
                 }
             }
             #small{
